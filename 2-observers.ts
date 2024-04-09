@@ -1,10 +1,12 @@
 import { Observable, from } from 'rxjs'
-import { sectionBreak } from './global'
+import { sectionBreak } from '../global'
+
+const throwError = Math.random() < 0.5
 
 const observable = new Observable<number>(function subscribe(subscriber) {
     try {
         subscriber.next(1)
-        if (Math.random() < 0.5) {
+        if (throwError) {
             throw new Error('test error')
         }
         subscriber.next(2)
