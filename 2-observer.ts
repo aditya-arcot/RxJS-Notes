@@ -1,5 +1,5 @@
-import { Observable, from } from 'rxjs'
-import { sectionBreak } from '../global'
+import { Observable } from 'rxjs'
+import { sectionBreak } from './global'
 
 const throwError = Math.random() < 0.5
 
